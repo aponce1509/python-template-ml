@@ -29,7 +29,7 @@ install: activate
 
 .PHONY: run-pre-commit  ## Run pre-commit
 run-pre-commit: activate
-	pre-commite run --all-files
+	pre-commit run --all-files
 
 .PHONY: format  ## Auto-format python source files
 format:
