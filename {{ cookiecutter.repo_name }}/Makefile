@@ -25,7 +25,11 @@ ml-folders:
 install: activate
 	pip install --upgrade pip
 	pip install -r requirements-dev.txt
-	pre-commit install --install-hooks
+	pre-commit install
+
+.PHONY: run-pre-commit  ## Run pre-commit
+run-pre-commit: activate
+	pre-commite run --all-files
 
 .PHONY: format  ## Auto-format python source files
 format:
